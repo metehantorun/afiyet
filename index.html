@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFİYET – Yemek & Tarif Planlayıcı</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+<header class="topbar">
+  <div class="logo">afiyet<span class="logo-dot"></span></div>
+  <div class="search-bar">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Tarif veya malzeme ara..." oninput="handleSearch(this.value)">
+  </div>
+  <nav class="nav-tabs">
+    <button type="button" class="nav-tab active" data-view="home"     onclick="switchView('home',this)">🏠 Ana Sayfa</button>
+    <button type="button" class="nav-tab"         data-view="suggest"  onclick="switchView('suggest',this)">🥕 Malzeme ile Ara</button>
+    <button type="button" class="nav-tab"         data-view="pantry"   onclick="switchView('pantry',this)">📦 Kiler</button>
+    <button type="button" class="nav-tab"         data-view="plan"     onclick="switchView('plan',this)">📅 Yemek Planı</button>
+    <button type="button" class="nav-tab"         data-view="shopping" onclick="switchView('shopping',this)">🛒 Alışveriş <span class="badge" id="shopBadge">0</span></button>
+  </nav>
+  <div class="avatar">AK</div>
+</header>
+<div class="app-main">
+  
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Keşfet</div>
+      <button type="button" class="sidebar-item active" data-cat="all"          onclick="filterCat('all',this)">🧭 Tüm Tarifler</button>
+      <button type="button" class="sidebar-item"        data-cat="Çorba"        onclick="filterCat('Çorba',this)">🍲 Çorba</button>
+      <button type="button" class="sidebar-item"        data-cat="Et Yemekleri" onclick="filterCat('Et Yemekleri',this)">🥩 Et Yemekleri</button>
+      <button type="button" class="sidebar-item"        data-cat="Sebze"        onclick="filterCat('Sebze',this)">🌿 Sebze</button>
+      <button type="button" class="sidebar-item"        data-cat="Tatlı"        onclick="filterCat('Tatlı',this)">🍮 Tatlı</button>
+      <button type="button" class="sidebar-item"        data-cat="Kahvaltı"     onclick="filterCat('Kahvaltı',this)">☕ Kahvaltı</button>
+      <button type="button" class="sidebar-item"        data-cat="Makarna"      onclick="filterCat('Makarna',this)">🍝 Makarna</button>
+      <button type="button" class="sidebar-item"        data-cat="Salata"       onclick="filterCat('Salata',this)">🥗 Salata</button>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Profil</div>
+      <button type="button" class="sidebar-item" data-view="favorites" onclick="switchView('favorites',this)">♥ Favorilerim <span class="badge" id="favBadge">0</span></button>
+      <button class="sidebar-item" onclick="showToast('⚙️ Ayarlar yakında...')">⚙️ Ayarlar</button>
+      <button class="sidebar-item" onclick="showToast('🚪 Çıkış yapıldı')">🚪 Çıkış Yap</button>
+    </div>
+  </aside>
+  <main class="content" id="mainContent"></main>
+  
+  <aside class="detail-panel" id="detailPanel" style="display:none">
+    <div class="detail-header">
+      <span>Tarif Detayı</span>
+      <button class="detail-close" onclick="closeDetail()">✕</button>
+    </div>
+    <div id="detailBody"></div>
+  </aside>
+ 
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div id="recipeModal" class="modal-overlay" style="display:none" onclick="closeModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <span id="modalTitle">Tarif Seç</span>
+      <button class="detail-close" onclick="closeRecipeModal()">✕</button>
+    </div>
+    <div class="modal-search">
+      <input type="text" id="modalSearch" placeholder="Tarif ara..." oninput="filterModalRecipes(this.value)">
+    </div>
+    <div id="modalRecipeList" class="modal-recipe-list"></div>
+    <div class="modal-footer">
+      <button class="btn-random" onclick="pickRandomMeal()">🎲 Rastgele Seç</button>
+      <button class="btn-danger" id="modalClearBtn" onclick="clearMealSlot()" style="display:none">🗑 Bu slotu temizle</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/data/recipes.js"></script>
+<script src="js/data/seedData.js"></script>
+
+<script src="js/core/constants.js"></script>
+<script src="js/core/state.js"></script>
+<script src="js/core/router.js"></script>
+
+<script src="js/utils/unitConverter.js"></script>
+<script src="js/utils/dateHelper.js"></script>
+<script src="js/utils/categoryHelper.js"></script>
+
+<script src="js/ui/toast.js"></script>
+<script src="js/ui/navigation.js"></script>
+<script src="js/ui/components.js"></script>
+
+<script src="js/features/recipeFilter.js"></script>
+<script src="js/features/home.js"></script>
+<script src="js/features/suggest.js"></script>
+<script src="js/features/pantry.js"></script>
+<script src="js/features/shopping.js"></script>
+<script src="js/features/mealPlan.js"></script>
+<script src="js/features/recipeModal.js"></script>
+<script src="js/features/recipeDetail.js"></script>
+<script src="js/features/favorites.js"></script>
+
+<script src="js/core/bootstrap.js"></script>
+
+</body>
+</html>
