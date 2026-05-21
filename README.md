@@ -51,13 +51,13 @@ npx --yes serve .
 
 <br>
 
-- **Ana sayfa:** tariflere göz atın, arayın, kategoriye filtreleyin.
-- **Malzeme ile Ara:** malzeme ekleyin; öneriler sıralanır.
-- **Kiler:** evdeki stoku girin; miktar değişince **plan ve “tariften ekle” ile oluşan alışveriş grupları** yeniden hesaplanır.
-- **Yemek planı:** slota tıklayınca uygun tarif atanır; **Alışveriş Listesi Oluştur** ile kiler düşülerek liste üretilir.
-- **Alışveriş:** satırları işaretleyerek ilerleyin; işaretlenen satırlar kilere eklenir.
-- **Veri:** favoriler, kiler, plan, alışveriş listesi, porsiyonlar, malzeme etiketleri, **arama metni** ve öneri filtreleri tarayıcıda **`localStorage`** anahtarı `afiyet_v1` ile saklanır; sayfa yenilense de kalır. Sıfırlamak için tarayıcı geliştirici araçlarından bu anahtarı silin veya gizli pencerede açın.
-- **Silme onayı:** kilerdeki bir satırı çöp kutusuyla silerken veya planı temizlerken tarayıcı **onay** penceresi sorulur.
+- **Ana sayfa:** Tariflere göz atın, arayın, kategoriye filtreleyin.
+- **Malzeme ile Ara:** Malzeme ekleyin; öneriler sıralanır.
+- **Kiler:** Evdeki stoku girin; miktar değişince **plan ve “tariften ekle” ile oluşan alışveriş grupları** yeniden hesaplanır.
+- **Yemek planı:** Slota tıklayınca uygun tarif atanır; **Alışveriş Listesi Oluştur** ile kiler düşülerek liste üretilir.
+- **Alışveriş:** Satırları işaretleyerek ilerleyin; işaretlenen satırlar kilere eklenir.
+- **Veri:** Favoriler, kiler, plan, alışveriş listesi, porsiyonlar, malzeme etiketleri, **arama metni** ve öneri filtreleri tarayıcıda **`localStorage`** anahtarı `afiyet_v1` ile saklanır; sayfa yenilense de kalır. Sıfırlamak için tarayıcı geliştirici araçlarından bu anahtarı silin veya gizli pencerede açın.
+- **Silme onayı:** Kilerdeki bir satırı çöp kutusuyla silerken veya planı temizlerken tarayıcı **onay** penceresi sorulur.
 
 ## Katkı (Contribution)
 
