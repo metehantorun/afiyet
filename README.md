@@ -114,7 +114,7 @@ js/
 
 ## GitHub bağlantısı
 
-
+https://github.com/metehantorun/afiyet
 
 ## Renk paleti (SDD)
 
