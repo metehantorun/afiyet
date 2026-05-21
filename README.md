@@ -43,7 +43,13 @@ cd afiyet
 npx --yes serve .
 ```
 
-## Kullanım (kısa)
+## Kullanım
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/3e213917-856c-4f78-9cb0-e8c681188ef2" alt="Uygulama Ekran Görüntüsü" width="100%">
+</div>
+
+<br>
 
 - **Ana sayfa:** tariflere göz atın, arayın, kategoriye filtreleyin.
 - **Malzeme ile Ara:** malzeme ekleyin; öneriler sıralanır.
