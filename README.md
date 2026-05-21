@@ -61,15 +61,17 @@ npx --yes serve .
 4. Pull request açıklamasında **ne / neden** yazın.
 
 
-## Proje yapısı
+## Proje Yapısı
+
+```text
 js/
-├── core/           ← Uygulama omurgası
+├── core/            ← Uygulama omurgası
 │   ├── constants.js    (sabitler: DAY_KEYS, MEAL_TYPES vb.)
 │   ├── state.js        (Singleton state + localStorage persist)
 │   ├── router.js       (render router)
 │   └── bootstrap.js    (init — en son yüklenir)
 │
-├── data/           ← Saf veri katmanı
+├── data/            ← Saf veri katmanı
 │   ├── recipes.js      (35 tarif)
 │   └── seedData.js     (catColors, başlangıç alışveriş/plan/kiler)
 │
@@ -93,8 +95,7 @@ js/
     ├── recipeModal.js   (FR-18–19)
     ├── recipeDetail.js  (FR-15–16)
     └── favorites.js     (FR-10)
-
-
+```
 ## SRS fonksiyonel gereksinim özeti 
 
 | ID | Açıklama | Bu prototipte |
