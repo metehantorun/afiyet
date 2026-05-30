@@ -59,14 +59,6 @@ npx --yes serve .
 - **Veri:** Favoriler, kiler, plan, alışveriş listesi, porsiyonlar, malzeme etiketleri, **arama metni** ve öneri filtreleri tarayıcıda **`localStorage`** anahtarı `afiyet_v1` ile saklanır; sayfa yenilense de kalır. Sıfırlamak için tarayıcı geliştirici araçlarından bu anahtarı silin veya gizli pencerede açın.
 - **Silme onayı:** Kilerdeki bir satırı çöp kutusuyla silerken veya planı temizlerken tarayıcı **onay** penceresi sorulur.
 
-## Katkı (Contribution)
-
-1. `main` veya `develop` dalından dal açın.  
-2. Anlamlı commit mesajları kullanın.  
-3. Küçük, tek konulu değişiklikleri tercih edin.  
-4. Pull request açıklamasında **ne / neden** yazın.
-
-
 ## Proje Yapısı
 
 ```text
